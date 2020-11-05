@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  height: 50px;
+  background-color: pink;
+  background-image: linear-gradient(45deg, #f9dbdc 25%, pink 25%, pink 75%, #f9dbdc 75%, #f9dbdc),
+    linear-gradient(45deg, #f9dbdc 25%, pink 25%, pink 75%, #f9dbdc 75%, #f9dbdc);
+  background-size: 25px 25px;
+  background-position: 0 0, 20px 20px;
+  padding: 10px 0;
+  display: flex;
+}
+
+.home {
+  font-size: 23px;
+  text-decoration: none;
+  font-family: cursive;
+  color: black;
+}
+
+.left-content {
+  width: 50%;
+  margin-left: 30px;
+}
+
+.navbar  {
+  width: 50%;
+  padding: 20px;
+}
+
+.lists-right {
+  margin: 0 20px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.user-name {
+  margin: 0 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.fa {
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.user-lists {
+  position: fixed;
+  right: 10px;
+  top: 50px;
+  text-align: center;
+  justify-content: center;
+}
+
+.lists {
+  width: 90px;
+  height: 80px;
+  background-color: rgb(245, 171, 185);
+}
+
+.pull-down-lists {
+  align-items: center;
+}
+
+.pull-lists {
+  color: black;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-box {
+  border: 2px solid white;
+  background-color: white;
+  margin-right: 20px;
+}
+
+.signup-box {
+  border: 2px solid white;
+  background-color: white;
+}
+
+.login {
+  margin: 0 20px;
+  text-decoration: none;
+  color: rgb(243, 108, 131);;
+}
+
+.signup {
+  margin: 0 20px;
+  text-decoration: none;
+  color: rgb(243, 108, 131);
+}
+
+
+
+
+
