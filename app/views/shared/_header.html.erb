@@ -1,0 +1,30 @@
+<header class="top-page-header">
+  <div class="left-content">
+    <%= link_to "english_comminuty", root_path, class: "home" %> 
+  </div>
+  <div class="navbar"></div>
+    <ul class="lists-right">   
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.name, "#", class: "user-name" %></li>
+        <li><i class="fa fa-list fa-2x" aria-hidden="true" id="menu"></i></li>
+        </div>
+     <div class="user-lists hidden" id="user-lists">
+     <ul class="lists">
+      <li class="pull-down-lists">
+        <%= link_to "edit", edit_user_path(current_user.id), class: "pull-lists" %>
+      </li>
+      <li class="pull-down-lists">
+        <%= link_to "logout", destroy_user_session_path, method: :delete, class: "pull-lists" %>
+      </li>
+    </ul>
+  </div>
+      <% else %>
+      <div class="login-box">
+        <li><%= link_to 'log_in', user_session_path, class: "login" %></li>
+      </div>
+      <div class="signup-box">
+        <li><%= link_to 'sign_up', new_user_registration_path, class: "signup" %></li>
+      </div>
+      <% end %>
+    </ul>
+</header>

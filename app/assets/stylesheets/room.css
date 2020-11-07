@@ -1,0 +1,154 @@
+
+
+.first-view {
+  height: 300px;
+  position: relative;
+}
+
+.top-image {
+  height: 100%;
+  width: 100%;
+}
+
+.first-view h1 {
+  position: absolute;
+  color: black;
+  top: 20%;
+  left: 10%;
+  font-size: 40px;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+h2 {
+  position: relative;
+   margin: 80px;
+   text-align: center;
+ }
+ 
+ h2:before,
+ h2:after {
+   position: absolute;
+   z-index: 0;
+   bottom: -10px;
+   display: block;
+   content: '';
+   border: 1em solid #d90606;
+ }
+ 
+ h2:before {
+   left: -30px;
+   border-left-width: 15px;
+   border-left-color: transparent;
+ }
+ 
+ h2:after {
+   right: -30px;
+   border-right-width: 15px;
+   border-right-color: transparent;
+ }
+ 
+ h2 span {
+   position: relative;
+   z-index: 1;
+   font-size: 20px;
+   display: block;
+   padding: 1rem 2rem;
+   color: #fff;
+   background: #fa4141;
+ }
+ 
+ h2 span:before,
+ h2 span:after {
+   position: absolute;
+   bottom: -10px;
+   display: block;
+   width: 10px;
+   height: 10px;
+   content: '';
+   border-style: solid;
+   border-color: #b70505 transparent transparent transparent;
+ }
+ 
+ h2 span:before {
+   left: 0;
+   border-width: 10px 0 0 10px;
+ }
+ 
+ h2 span:after {
+   right: 0;
+   border-width: 10px 10px 0 0;
+ }
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  height: 20px;
+}
+
+.rooms {
+  background-color: #fff;
+  display: flex;
+}
+.room {
+  margin: 10px;
+}
+
+.room-detail {
+  background-color: rgb(250, 213, 219);
+  display: inline-block;
+  margin: 40px 40px 40px 70px;
+  font-size: 20px;
+  border: 2px solid rgb(250, 213, 219);
+  padding: 20px;
+  border-radius: 8%;
+  text-align: center;
+}
+
+.room-user-name {
+  margin-bottom: 5px;
+}
+
+.room-name {
+  margin-bottom: 5px;
+}
+
+.room-toeic {
+  margin-bottom: 10px;
+}
+
+.enter-room {
+  width: 70px;
+  border: 2px solid red;
+  background-color: red;
+  margin: 0 auto;
+}
+
+.enter {
+  text-decoration: none;
+  color: white;
+}
+
+h5 {
+  margin-left: 80%;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: pink;
+  text-align: center;
+  border-radius: 8%;
+}
+
+.footer {
+  background-color: rgb(204, 200, 200);
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  margin-top: 11px;
+}
+
+.footer p {
+  padding-top: 10px;
+}
