@@ -1,5 +1,6 @@
 <%= render "shared/header" %>
 
+<body>
 <div class="whole">
   <div class="first-view">
     <%= image_tag 'thomas-willmott-IAQp5dLXUZQ-unsplash', class: "top-image"%>
@@ -16,7 +17,7 @@
     </ul>
   </div>
   <% end %>
-  </div>
+</div>
 
   <%= link_to "トークルーム作成", new_room_path %>
   <h2><span>room lists</span></h2>
@@ -29,25 +30,31 @@
 </div>
 
   <div class="rooms">
-  <div class="room">
-  <%# <% @rooms.each do |room| %> 
-  <%# <ul class="room-detail">
-    <li class="room-user-name"> %>
-      <%# <%= room.user.name %>
-    <%# </li>
-    <li class="room-name">
-      <%= room.name %>
-    <%# </li> %>
-    <%# <li class="room-toeic">
-      <%= "TOEIC_level:#{room.toeic.name}" %>
-    <%# </li> %>
-    <%# <li class="enter-room">
-      <%= link_to "enter", room_path(room), class: "enter" %>
-    <%# </li>
-  </ul> %>
-  <%# <% end %> 
+    <div class="room">
+    <%# <% @rooms.each do |room| %> 
+    <%# <ul class="room-detail">
+      <li class="room-user-name"> %>
+        <%# <%= room.user.name %>
+      <%# </li>
+      <li class="room-name">
+        <%= room.name %>
+      <%# </li> %>
+      <%# <li class="room-toeic">
+        <%= "TOEIC_level:#{room.toeic.name}" %>
+      <%# </li> %>
+      <%# <li class="enter-room">
+        <%= link_to "enter", room_path(room), class: "enter" %>
+      <%# </li>
+    </ul> %>
+    <%# <% end %> 
+    
+    </div>
   </div>
-</div>
+  </div>
+  
+  <h5 id="back">Back to the top</h5>
+</body>
 
+<div class="footer">
+  <p>Copyright ©ENGLISH_COMMUNITY All rights reserved</p>
 </div>
-
