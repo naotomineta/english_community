@@ -1,0 +1,39 @@
+<div class='account-page' id='account-page'>
+  <div class='account-page__inner clearfix'>
+    <div class='account-page__inner--left account-page__header'>
+      <h1>Edit Account</h1>
+     
+      <%= link_to "log_out", destroy_user_session_path, method: :delete, class: 'btn'%>
+      <%= link_to "Back to the top", root_path, class: 'btn'%>
+    </div>
+    <div class='account-page__inner--right user-form'>
+      <%= form_with model: current_user, local: true do |f|%>
+        <div class="field-image">
+            <%= f.label :image %>
+          </div>
+          <div class="image-input">
+            <%= f.file_field :image %>
+          </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :name%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :name, autofocus: true%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :email%>
+          </div>
+          <div class='field-input'>
+            <%= f.email_field :email%>
+          </div>
+        </div>
+        <div class='actions'>
+          <%= f.submit "Update", class: 'btn'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
