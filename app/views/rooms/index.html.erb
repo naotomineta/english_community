@@ -17,7 +17,7 @@
     <input type="submit" class="fa fa-2x" value="&#xf002;">
   <% end %>
   <div class="create-room">
-    <%= link_to "create room!", new_room_path, class: "create" %>
+    <%= button_to "create room!", {controller: "rooms", action: "new"}, {method: :get, class: "create-room-btn"} %>
   </div>
 </div>
 
@@ -38,7 +38,7 @@
         <%= "TOEIC_level:#{room.toeic.name}" %>
        </li> 
        <li class="enter-room">
-        <%= link_to "enter", rooms_path(room), class: "enter" %>
+        <%= link_to "enter", room_path(room), class: "enter" %>
        </li>
       </ul>
     <% end %> 
