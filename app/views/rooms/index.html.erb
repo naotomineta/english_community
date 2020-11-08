@@ -5,18 +5,7 @@
   <div class="first-view">
     <%= image_tag 'thomas-willmott-IAQp5dLXUZQ-unsplash', class: "top-image"%>
     <h1>let's talk in English!</h1>
-    <% if user_signed_in? %>
-      <div class="user-lists hidden" id="user-lists">
-     <ul class="lists">
-      <li class="pull-down-lists">
-        <%= link_to "edit", edit_user_path(current_user.id), class: "pull-lists" %>
-      </li>
-      <li class="pull-down-lists">
-        <%= link_to "logout", destroy_user_session_path, method: :delete, class: "pull-lists" %>
-      </li>
-    </ul>
-  </div>
-  <% end %>
+    <%= render "shared/lists" %>
 </div>
 
 
@@ -34,30 +23,29 @@
 
   <div class="rooms">
     <div class="room">
-    <%# <% @rooms.each do |room| %> 
-    <%# <ul class="room-detail">
-      <li class="room-user-name"> %>
-        <%# <%= room.user.name %>
-      <%# </li>
+    <% @rooms.each do |room| %>
+     <ul class="room-detail">
+      <li class="room-user-name"> 
+        <% if room.user.image? %>
+          <%= image_tag room.user.image.url %>
+        <% end %>
+        <%= room.user.name %>
+       </li>
       <li class="room-name">
         <%= room.name %>
-      <%# </li> %>
-      <%# <li class="room-toeic">
+       </li> 
+       <li class="room-toeic">
         <%= "TOEIC_level:#{room.toeic.name}" %>
-      <%# </li> %>
-      <%# <li class="enter-room">
-        <%= link_to "enter", room_path(room), class: "enter" %>
-      <%# </li>
-    </ul> %>
-    <%# <% end %> 
+       </li> 
+       <li class="enter-room">
+        <%= link_to "enter", rooms_path(room), class: "enter" %>
+       </li>
+      </ul>
+    <% end %> 
     
     </div>
   </div>
   </div>
   
-  <h5 id="back">Back to the top</h5>
 </body>
-
-<div class="footer">
-  <p>Copyright ©ENGLISH_COMMUNITY All rights reserved</p>
-</div>
+ <%= render "shared/footer" %>
