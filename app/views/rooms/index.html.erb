@@ -5,56 +5,47 @@
   <div class="first-view">
     <%= image_tag 'thomas-willmott-IAQp5dLXUZQ-unsplash', class: "top-image"%>
     <h1>let's talk in English!</h1>
-    <% if user_signed_in? %>
-      <div class="user-lists hidden" id="user-lists">
-     <ul class="lists">
-      <li class="pull-down-lists">
-        <%= link_to "edit", edit_user_path(current_user.id), class: "pull-lists" %>
-      </li>
-      <li class="pull-down-lists">
-        <%= link_to "logout", destroy_user_session_path, method: :delete, class: "pull-lists" %>
-      </li>
-    </ul>
-  </div>
-  <% end %>
+    <%= render "shared/lists" %>
 </div>
 
-  <%= link_to "トークルーム作成", new_room_path %>
+
   <h2><span>room lists</span></h2>
 
 <div class="search">
   <%= search_form_for @p, url: search_rooms_path do |f| %>
-  <%= f.collection_select :toeic_id_eq, @toeic, :toeic_id, :toeic_id,  include_blank: 'your TOEIC_level?'%>
-  <input type="submit" class="fa fa-2x" value="&#xf002;">
-<% end %>
+    <%= f.collection_select :toeic_id_eq, @toeic, :toeic_id, :toeic_id,  include_blank: 'your TOEIC_level?'%>
+    <input type="submit" class="fa fa-2x" value="&#xf002;">
+  <% end %>
+  <div class="create-room">
+    <%= button_to "create room!", {controller: "rooms", action: "new"}, {method: :get, class: "create-room-btn"} %>
+  </div>
 </div>
 
   <div class="rooms">
     <div class="room">
-    <%# <% @rooms.each do |room| %> 
-    <%# <ul class="room-detail">
-      <li class="room-user-name"> %>
-        <%# <%= room.user.name %>
-      <%# </li>
+    <% @rooms.each do |room| %>
+     <ul class="room-detail">
+      <li class="room-user-name"> 
+        <% if room.user.image? %>
+          <%= image_tag room.user.image.url %>
+        <% end %>
+        <%= room.user.name %>
+       </li>
       <li class="room-name">
         <%= room.name %>
-      <%# </li> %>
-      <%# <li class="room-toeic">
+       </li> 
+       <li class="room-toeic">
         <%= "TOEIC_level:#{room.toeic.name}" %>
-      <%# </li> %>
-      <%# <li class="enter-room">
+       </li> 
+       <li class="enter-room">
         <%= link_to "enter", room_path(room), class: "enter" %>
-      <%# </li>
-    </ul> %>
-    <%# <% end %> 
+       </li>
+      </ul>
+    <% end %> 
     
     </div>
   </div>
   </div>
   
-  <h5 id="back">Back to the top</h5>
 </body>
-
-<div class="footer">
-  <p>Copyright ©ENGLISH_COMMUNITY All rights reserved</p>
-</div>
+ <%= render "shared/footer" %>

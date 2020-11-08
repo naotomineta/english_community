@@ -1,0 +1,28 @@
+<%= render "shared/header" %>
+<%= render "shared/lists" %>
+  <div class="search-results">
+    <h1>search-results</h1>
+  </div>
+
+  <div class="rooms">
+    <div class="room">
+      <% @results.each do |result| %>
+        <ul class="room-detail">
+          <li class="room-user-name">
+            <%= result.user.name %>
+          </li>
+          <li class="room-name">
+            <%= result.name %>
+          </li>
+          <li class="room-toeic">
+            <%= "TOEIC_level:#{result.toeic.name}" %>
+          </li>
+          <li class="enter-room">
+            <%= link_to "enter", room_path(result), class: "enter" %>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+</div>
+
+<h5 id="back">Back to the top</h5>
