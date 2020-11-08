@@ -19,14 +19,17 @@
   <% end %>
 </div>
 
-  <%= link_to "トークルーム作成", new_room_path %>
+
   <h2><span>room lists</span></h2>
 
 <div class="search">
   <%= search_form_for @p, url: search_rooms_path do |f| %>
-  <%= f.collection_select :toeic_id_eq, @toeic, :toeic_id, :toeic_id,  include_blank: 'your TOEIC_level?'%>
-  <input type="submit" class="fa fa-2x" value="&#xf002;">
-<% end %>
+    <%= f.collection_select :toeic_id_eq, @toeic, :toeic_id, :toeic_id,  include_blank: 'your TOEIC_level?'%>
+    <input type="submit" class="fa fa-2x" value="&#xf002;">
+  <% end %>
+  <div class="create-room">
+    <%= link_to "create room!", new_room_path, class: "create" %>
+  </div>
 </div>
 
   <div class="rooms">
