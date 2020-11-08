@@ -13,15 +13,23 @@
   </div>
   <div class="chat">
     <div class="chat-header">
-      <div class="create-user-image">
-        <%= image_tag @room.user.image.url %>
-      </div>  
+      <% if @room.user.image? %>
+        <div class="create-user-image">
+          <%= image_tag @room.user.image.url %>
+        </div>  
+      <% end %>
       <div class="create-user-name">
          <%= @room.user.name %>
       </div>
-      <div class="leave-btn">
-        <%= button_to "Leave", { controller: "rooms", action: "index"}, { method: :get } %>
-      </div>
+      <% if current_user.id == @room.user_id %>
+        <div class="delete-btn">
+          <%= button_to "delete the room", {controller: "rooms", action: "destroy"}, { method: :delete } %>
+        </div>
+      <% else %>
+        <div class="leave-btn">
+          <%= button_to "Leave", { controller: "rooms", action: "index"}, { method: :get } %>
+        </div>
+      <% end %>
     </div>
   </div>  
 </div>

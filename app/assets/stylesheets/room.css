@@ -336,3 +336,8 @@ select {
   margin-left: 50%;
 }
 
+.delete-btn {
+  font-size: 17px;
+  margin-top: 15px;
+  margin-left: 45%;
+}
