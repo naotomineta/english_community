@@ -31,5 +31,10 @@
         </div>
       <% end %>
     </div>
+    
+    <div class="message-form">  
+      <%= text_field_tag :content, nil, data: { behavior: 'room_speaker' }, class: "form-message", placeholder: "you can send it by enter" %>
+    </div>
+    
   </div>  
 </div>

@@ -291,7 +291,7 @@ select {
 }
 .side-bar {
   width: 300px;
-  height: 100vh;
+  height: 93vh;
   background-color: rgb(248, 233, 236);
 }
 
@@ -340,4 +340,23 @@ select {
   font-size: 17px;
   margin-top: 15px;
   margin-left: 45%;
+}
+
+.messages-screen {
+  height: calc(100vh - 105px - 70px);
+  overflow-y: scroll;
+}
+
+
+
+.message-form {
+  height: 70px;
+  background-color: #dddddd;
+}
+
+.form-message {
+  width: 800px;
+  height: 35px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
