@@ -1,0 +1,21 @@
+
+<div class="message-whole">
+  <div class="balloon6">
+    <div class="faceicon">
+      <% if message.user.image? %>
+        <%= image_tag message.user.image.url %>
+      <% else %>
+        <p><i class="fa fa-user-circle-o fa-3x" aria-hidden="true" id="user"></i></p>
+      <% end %>
+    </div>
+
+    <div class="chatting">
+      <div class="message-user-name">
+        <%= message.user.name %>
+      </div>
+      <div class="says">
+        <p><%= message.content %></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -120,6 +120,10 @@ h2 {
   margin-bottom: 5px;
 }
 
+.room-user-name img {
+  border-radius: 50%;
+}
+
 .room-name {
   margin-bottom: 5px;
 }
@@ -291,7 +295,7 @@ select {
 }
 .side-bar {
   width: 300px;
-  height: 100vh;
+  height: 93vh;
   background-color: rgb(248, 233, 236);
 }
 
@@ -320,8 +324,17 @@ select {
 }
 
 .chat-header {
+  height: 50px;
   background-color: rgb(248, 233, 236);
   display: flex;
+}
+
+.create-user-image {
+  margin-top: 5px;
+}
+
+.create-user-image img {
+  border-radius: 50%;
 }
 
 .create-user-name {
@@ -337,7 +350,121 @@ select {
 }
 
 .delete-btn {
-  font-size: 17px;
+  font-size: 14px;
   margin-top: 15px;
   margin-left: 45%;
 }
+
+.messages-screen {
+  height: calc(100vh - 95px - 70px);
+  overflow-y: scroll;
+}
+
+.messages {
+  margin: 10px;
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.message-form {
+  height: 70px;
+  background-color: #dddddd;
+}
+
+.form-message {
+  width: 90%;
+  height: 35px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.message-whole {
+  padding: 0px 10px;
+  margin: 15px -20px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.balloon6 {
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.balloon6 .faceicon {
+  float: left;
+  margin-right: -20px;
+  width: 40px;
+}
+
+.balloon6 .faceicon img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.balloon6 .chatting {
+  width: 100%;
+  text-align: left;
+}
+
+.message-user-name {
+  margin-left: 75px;
+}
+
+.says {
+  display: inline-block;
+  position: relative; 
+  margin: 0 0 0 60px;
+  padding: 10px;
+  border-radius: 12px;
+  background: #edf1ee;
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 3px; 
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid #edf1ee;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+.says p {
+  margin: 0;
+  padding: 0;
+}
+
+.mysays {
+  display: inline-block;
+  position: relative; 
+  margin: 20px 0 0 60px;
+  padding: 10px;
+  border-radius: 12px;
+  background: pink;
+}
+
+.mysays:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 3px; 
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid pink;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+.mychat {
+  background-color: pink;
+}
+
+
+
