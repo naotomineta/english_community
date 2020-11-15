@@ -31,7 +31,15 @@
         </div>
       <% end %>
     </div>
-    
+
+    <div class="messages-screen">
+      <div id='messages' data-room_id="<%= @room.id %>" class="messages">
+        <div class="message">
+          <%= render @messages %>
+        </div>
+      </div>
+    </div>
+
     <div class="message-form">  
       <%= text_field_tag :content, nil, data: { behavior: 'room_speaker' }, class: "form-message", placeholder: "you can send it by enter" %>
     </div>

@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
   before_action :search_room, only: [:index, :search]
+  before_action :authenticate_user!, except: [:index]
 
   def index
     @rooms = Room.all.order(id: 'DESC')
@@ -21,6 +22,7 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
+    @messages = @room.messages
   end
 
   def destroy

@@ -1,7 +1,7 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
 
-  process resize_to_limit: [50, 50]
+  process resize_to_limit: [40, 40]
 
   process convert: 'jpg'
 
