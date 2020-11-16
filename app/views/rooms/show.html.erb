@@ -7,9 +7,21 @@
     <div class="memo-lists">
       <h1>~Memo lists~</h1>
     </div>
-    <div class="display-btn">
+    <div class="display-btn" id="display">
       <h4>display</h5>
     </div>
+    <% @memos.each do |memo| %>
+      <% if current_user.id == memo.user_id %>
+        <div class="room-memo-lists hidden" id="memo-lists">
+          <div class="memo-content">
+            <%= memo.content %>
+          </div>
+          <div class="memo-translation">
+            <%= memo.translation %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
   <div class="chat">
     <div class="chat-header">

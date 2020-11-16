@@ -1,5 +1,6 @@
 class MemosController < ApplicationController
   def index
+    @memos = Memo.all.order(id: 'DESC')
   end
 
   def new
