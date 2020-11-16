@@ -18,6 +18,7 @@
   text-decoration: none;
   font-family: cursive;
   color: black;
+  cursor: pointer;
 }
 
 .left-content {
@@ -40,6 +41,11 @@
 
 .user-name {
   margin: 0 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.header-memo {
   text-decoration: none;
   color: black;
 }

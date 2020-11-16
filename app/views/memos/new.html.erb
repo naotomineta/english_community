@@ -1,0 +1,31 @@
+<div class='chat-room-form'>
+  <h1>Add a memo</h1>
+  <%=form_with model: @memo, local: true do |f|%>
+
+  <%= render "shared/error_messages", model: f.object %>
+
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :English, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :content, class: 'chat__room_name chat-room-form__input', placeholder: 'please input an English sentence'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :translation, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :translation, class: 'chat__room_name chat-room-form__input', placeholder: 'Please input Japanese translation'%>
+      </div>
+    </div>
+    
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'></div>
+      <div class='chat-room-form__field--right'>
+        <%= f.submit "Add a memo", class: 'chat-room-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -9,4 +9,5 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  resources :memos, only: [:index, :new, :create]
 end
