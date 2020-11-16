@@ -1,0 +1,19 @@
+<%= render "shared/header" %>
+
+<div class="add-memo">
+  <%= link_to "add a memo", new_memo_path %>
+</div>
+
+<div class="memo-lists">
+  <% @memos.each do |memo| %>
+  <% if current_user.id == memo.user_id %>
+    <div class="memo-content">
+      <%= memo.content %>
+    </div>
+    <div class="memo-translation">
+      <%= memo.translation %>
+    </div>
+    <% end %>
+  <% end %>
+</div>
+

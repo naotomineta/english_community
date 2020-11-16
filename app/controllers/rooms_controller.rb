@@ -23,6 +23,7 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @messages = @room.messages
+    @memos = Memo.all.order(id: 'DESC')
   end
 
   def destroy

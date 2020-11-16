@@ -307,6 +307,10 @@ select {
   margin-top: 30px;
 }
 
+.room-memo-lists {
+  text-align: center;
+}
+
 .display-btn {
   text-align: center;
   cursor: pointer;
