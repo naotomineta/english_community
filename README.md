@@ -1,24 +1,38 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# English_community
 
-Things you may want to cover:
+"English_community" is a community site in English.
 
-* Ruby version
+# Description
 
-* System dependencies
+Even a beginner feels safe that anyone is easily available.
+You can chat with the user of the same level by a notice of Toeic score.
 
-* Configuration
+# DEMO
 
-* Database creation
+Anyone can easily chat in English.
 
-* Database initialization
+![](https://i.gyazo.com/a304a3d9bb009d479f269553986be6f5.png)
 
-* How to run the test suite
+# Features
 
-* Services (job queues, cache servers, search engines, etc.)
+・The memo function deployment.
+・The friend function deployment.
 
-* Deployment instructions
 
-* ...
+# Usage
+
+You make a room, or please enter the room.
+Enjoy a conversation in English with other users.
+
+# Author
+
+・mineta naoto
+・Twitter: https://twitter.com/aCVT7w6YElmLeQh
+
+
+
+
+
+
