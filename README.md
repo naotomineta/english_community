@@ -17,8 +17,8 @@ Anyone can easily chat in English.
 
 # Features
 
-・The memo function deployment.
-・The friend function deployment.
+* The memo function deployment.
+* The friend function deployment.
 
 
 # Usage
@@ -28,8 +28,8 @@ Enjoy a conversation in English with other users.
 
 # Author
 
-・mineta naoto
-・Twitter: https://twitter.com/aCVT7w6YElmLeQh
+* mineta naoto
+* Twitter: https://twitter.com/aCVT7w6YElmLeQh
 
 
 
