@@ -1,0 +1,32 @@
+
+
+.add-memo {
+  margin: 20px 0 0 20px;
+  width: 150px;
+  height: 30px;
+  color: white;
+  border: 2px solid red;
+  text-align: center;
+  background-color: red;
+}
+
+.add-a-memo {
+  text-decoration: none;
+  margin: 20px 0;
+  color: white;
+}
+
+.memos-block {
+  margin: 30px;
+}
+
+.lists-memo {
+  background-color: rgb(250, 213, 219);
+  display: inline-block;
+  margin: 40px 40px 40px 70px;
+  font-size: 14px;
+  border: 2px solid rgb(250, 213, 219);
+  padding: 20px;
+  border-radius: 8%;
+  text-align: center;
+}

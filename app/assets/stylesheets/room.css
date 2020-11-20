@@ -18,14 +18,14 @@
   font-weight: bold;
 }
 
-h2 {
+h3 {
   position: relative;
-   margin: 80px;
-   text-align: center;
+  margin: 80px;
+  text-align: center;
  }
  
- h2:before,
- h2:after {
+ h3:before,
+ h3:after {
    position: absolute;
    z-index: 0;
    bottom: -10px;
@@ -34,19 +34,19 @@ h2 {
    border: 1em solid #d90606;
  }
  
- h2:before {
-   left: -30px;
-   border-left-width: 15px;
-   border-left-color: transparent;
- }
+ h3:before {
+  left: -30px;
+  border-left-width: 15px;
+  border-left-color: transparent;
+}
  
- h2:after {
+ h3:after {
    right: -30px;
    border-right-width: 15px;
    border-right-color: transparent;
  }
  
- h2 span {
+ h3 span {
    position: relative;
    z-index: 1;
    font-size: 20px;
@@ -56,8 +56,8 @@ h2 {
    background: #fa4141;
  }
  
- h2 span:before,
- h2 span:after {
+ h3 span:before,
+ h3 span:after {
    position: absolute;
    bottom: -10px;
    display: block;
@@ -68,12 +68,12 @@ h2 {
    border-color: #b70505 transparent transparent transparent;
  }
  
- h2 span:before {
+ h3 span:before {
    left: 0;
    border-width: 10px 0 0 10px;
  }
  
- h2 span:after {
+ h3 span:after {
    right: 0;
    border-width: 10px 10px 0 0;
  }
@@ -307,8 +307,18 @@ select {
   margin-top: 30px;
 }
 
+.memo-lists-display {
+  width: 270px;
+  font-size: 12px;
+  overflow: scroll;
+  height: 570px;
+}
+
 .room-memo-lists {
   text-align: center;
+  
+  height: 70px;
+  overflow: scroll;
 }
 
 .display-btn {
