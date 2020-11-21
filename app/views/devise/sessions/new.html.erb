@@ -5,7 +5,15 @@
       <%= render "devise/shared/links"%>
     </div>
     <div class='account-page__inner--right user-form'>
+
+    
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
+
+      <div class='login-flash-message'>
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
+      </div>
+
         <div class='field'>
           <div class='field-label'>
             <%= f.label :email%>
@@ -16,7 +24,7 @@
           <div class='field'>
             <div class='field-label'>
               <%= f.label :password%>
-              <i>(英数字8文字以上)</i>
+              <i>(More than alphanumeric character six characters)</i>
             </div>
             <div class='field-input'>
               <%= f.password_field :password, autocomplete: "off"%>

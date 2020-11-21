@@ -18,7 +18,7 @@
 .account-page .account-page__header h1 {
   margin-bottom: 10px;
   letter-spacing: 3px;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 200;
   font-family: cursive;
 }
@@ -108,5 +108,10 @@
   margin: 0;
   padding: 0;
   font-size: 13px;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
 }
 
