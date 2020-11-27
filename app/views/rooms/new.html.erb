@@ -3,13 +3,13 @@
   <%=form_with model: @room, local: true do |f|%>
 
   <%= render "shared/error_messages", model: f.object %>
-  
+
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
         <%= f.label :new_room, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
-        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
+        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'Please input the name of the room'%>
       </div>
     </div>
     <div class='chat-room-form__field'>
@@ -19,13 +19,13 @@
         <label class='chat-room-form__label' for='chat_room_チ'>Toeic level</label>
       </div>
       <div class='chat-room-form__field--right'>
-        <%= f.collection_select(:toeic_id, Toeic.all, :id, :name, {}, {class:"toeic:select"}) %>
+        <%= f.collection_select(:toeic_id, Toeic.all, :id, :name, {}, {class:"toeic:select", id:"toeic"}) %>
       </div>
     </div>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'></div>
       <div class='chat-room-form__field--right'>
-        <%= f.submit class: 'chat-room-form__action-btn'%>
+        <%= f.submit class: 'chat-room-form__action-btn', id: 'create-room'%>
       </div>
     </div>
   <% end %>

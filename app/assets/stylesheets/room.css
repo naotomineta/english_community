@@ -84,8 +84,6 @@ h3 {
   margin: 0 70px;
 }
 
-
-
 .create-room-btn {
   border: 3px solid red;
   background-color: rgb(247, 81, 81);
@@ -391,7 +389,7 @@ select {
 .form-message {
   width: 90%;
   height: 35px;
-  margin-bottom: 5px;
+  margin-top: 20px;
   margin-left: 20px;
 }
 

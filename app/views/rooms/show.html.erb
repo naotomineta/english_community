@@ -4,16 +4,17 @@
 
 <div class="wrapper">
   <div class="side-bar">
-    <div class="memo-lists">
+    <div class="memo-lists" id="dis">
       <h1>~Memo lists~</h1>
     </div>
     <div class="display-btn" id="display">
-      <h4>display</h5>
+      <h4>display</h4>
     </div>
 
     <div class="memo-lists-display hidden" id="memo-lists"> 
       <% @memos.each do |memo| %>
         <div class="room-memo-lists" >
+        <% if current_user.id == memo.user.id %>
           <div class="memo-content">
             <%= memo.content %>
           </div>
@@ -21,7 +22,9 @@
             <%= memo.translation %>
           </div>
         </div>
+        <% end %>
     <% end %>
+    </div>
     </div> 
   </div>
   <div class="chat">
@@ -54,8 +57,7 @@
     </div>
 
     <div class="message-form">  
-      <%= text_field_tag :content, nil, data: { behavior: 'room_speaker' }, class: "form-message", placeholder: "you can send it by enter" %>
-    </div>
-    
+      <%= text_field_tag :content, nil, data: { behavior: 'room_speaker' }, class: "form-message", placeholder: "you can send it by enter", id: "messageform", name: "messagecontent" %>
+    </div> 
   </div>  
 </div>

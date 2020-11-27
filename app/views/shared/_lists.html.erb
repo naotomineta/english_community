@@ -2,7 +2,7 @@
   <div class="user-lists hidden" id="user-lists">
     <ul class="lists">
       <li class="pull-down-lists">
-        <%= link_to "edit", edit_user_registration_path(current_user.id), class: "pull-lists" %>
+        <%= link_to "edit", edit_user_registration_path(current_user.id), class: "pull-lists", id: "useredit" %>
         </li>
       <li class="pull-down-lists">
         <%= link_to "logout", destroy_user_session_path, method: :delete, class: "pull-lists" %>
