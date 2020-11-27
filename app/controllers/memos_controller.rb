@@ -29,7 +29,11 @@ class MemosController < ApplicationController
     end
   end
 
-  
+  def destroy
+    @memo = Memo.find(params[:id])
+    @memo.destroy
+    redirect_to action: :index
+  end
 
   private
 
