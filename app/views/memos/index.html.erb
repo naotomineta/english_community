@@ -8,7 +8,8 @@
 
   <div class="memos-block">
     <% @memos.each do |memo| %>
-      <% if memo.user_id == current_user.id %>
+      <%= link_to edit_memo_path(memo), method: :get do %>
+        <% if memo.user_id == current_user.id %>
           <div class="lists-memo">
             <div class="memo-content">
               <%= memo.content %>
@@ -19,6 +20,7 @@
           </div>
         <% end %>
       <% end %>
+    <% end %>
   </div>
 </div>
 

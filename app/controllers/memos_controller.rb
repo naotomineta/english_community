@@ -16,6 +16,21 @@ class MemosController < ApplicationController
     end
   end
 
+  def edit
+    @memo = Memo.find(params[:id])
+  end
+
+  def update
+    @memo = Memo.find(params[:id])
+    if @memo.update(memo_params)
+      redirect_to memos_path
+    else
+      render :edit
+    end
+  end
+
+  
+
   private
 
   def memo_params

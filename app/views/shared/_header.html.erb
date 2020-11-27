@@ -7,7 +7,7 @@
       <% if user_signed_in? %>
         <li><%= link_to current_user.name, "#", class: "user-name" %></li>
         <%= link_to memos_path, class: "header-memo", method: :get do %>
-        <li><i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i></li>
+        <li><i class="fa fa-file-text-o fa-2x" aria-hidden="true" id='memo'></i></li>
         <% end %>
         <li><i class="fa fa-list fa-2x" aria-hidden="true" id="menu"></i></li>
         </div>

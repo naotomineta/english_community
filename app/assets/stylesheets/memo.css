@@ -29,4 +29,26 @@
   padding: 20px;
   border-radius: 8%;
   text-align: center;
+  color: black;
+}
+
+.header-memo {
+  float: right;
+}
+
+.delete-memo  {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 160px;
+  height: 40px;
+  background-color: rgb(207, 204, 204);
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.delete-memo .btn {
+  line-height: 40px;
+  text-decoration: none;
+  color: black;
 }
