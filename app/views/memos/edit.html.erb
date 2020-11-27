@@ -1,8 +1,10 @@
 <div class='chat-room-form'>
-  <h1>Add a memo</h1>
+  <h1>Update a memo</h1>
   <%=form_with model: @memo, local: true do |f|%>
-
-  <%= render "shared/error_messages", model: f.object %>
+    <div class="delete-memo">
+      <%= link_to "delete a memo", "/memos/#{@memo.id}", method: :delete, class: 'btn'%>
+    </div>
+    <%= render "shared/error_messages", model: f.object %>
 
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
@@ -24,7 +26,7 @@
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'></div>
       <div class='chat-room-form__field--right'>
-        <%= f.submit "Add a memo", class: 'chat-room-form__action-btn',id: 'addmemo'%>
+        <%= f.submit "Update a memo", class: 'chat-room-form__action-btn',id: 'updatememo'%>
       </div>
     </div>
   <% end %>

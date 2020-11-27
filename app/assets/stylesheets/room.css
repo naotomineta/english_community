@@ -391,7 +391,7 @@ select {
 .form-message {
   width: 90%;
   height: 35px;
-  margin-top: 20px;
+  margin-bottom: 5px;
   margin-left: 20px;
 }
 

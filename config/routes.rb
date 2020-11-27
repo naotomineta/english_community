@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    registrations: "users/registrations"
-  }
+  devise_for :users
   root to: 'rooms#index'
 
-  
+  resources :users, only: [:edit, :update] 
   resources :rooms, only: [:index, :new, :create, :show, :destroy] do
     resources :messages, only: [:new, :create]
     collection do
       get 'search'
     end
   end
-  resources :memos, only: [:index, :new, :create]
+  resources :memos, only: [:index, :new, :create, :edit, :update, :destroy]
 end
