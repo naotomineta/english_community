@@ -115,3 +115,21 @@
   color: red;
 }
 
+.image-input {
+  display: none;
+}
+
+.field-image {
+  margin-bottom: 10px;
+}
+
+.image-field {
+  width: 280px;
+  margin-top: 30px;
+  padding: 10px 40px;
+  color: #ffffff;
+  background-color: rgb(245, 70, 99);
+  cursor: pointer;
+}
+
+
