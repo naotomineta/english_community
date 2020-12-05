@@ -114,11 +114,21 @@ h3 {
   text-align: center;
 }
 
-.room-user-name {
+.room-image {
+  width: 40px;
+  height: 40px;
+}
+
+.room-user-infomation {
   margin-bottom: 5px;
 }
 
-.room-user-name img {
+.room-user-name {
+  text-decoration: none;
+  color: black;
+}
+
+.room-image {
   border-radius: 50%;
 }
 
@@ -347,12 +357,18 @@ select {
 
 .create-user-image img {
   border-radius: 50%;
+  width: 50px;
 }
 
 .create-user-name {
   font-size: 20px;
   margin-top: 10px;
   margin-left: 20px;
+}
+
+.show-user-name {
+  text-decoration: none;
+  color: black;
 }
 
 .leave-btn {

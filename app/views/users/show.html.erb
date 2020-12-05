@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+
+<%= render "shared/lists" %>
+
+<div class="show-main">
+  <div class="user-infomation">
+    <h1>User Infomation</h1>
+  </div>
+  <div class="faceicon">
+      <% if @user.image? %>
+        <%= image_tag @user.image.url, class: "as" %>
+      <% else %>
+        <p><i class="fa fa-user-circle-o fa-3x" aria-hidden="true" id="user"></i></p>
+      <% end %>
+    </div>
+  <div class="show-name">
+    <%= @user.name %>
+  </div>  
+</div>
+
+<div class="kakomi-maru4"><span class="title-maru4">introduction</span>
+  <%= simple_format @user.introduction %>
+</div>

@@ -25,11 +25,11 @@
       <div class="room">
       <% @rooms.each do |room| %>
       <ul class="room-detail">
-        <li class="room-user-name"> 
+        <li class="room-user-infomation"> 
           <% if room.user.image? %>
-            <%= image_tag room.user.image.url %>
+            <%= image_tag room.user.image.url, class: "room-image" %>
           <% end %>
-          <%= room.user.name %>
+          <%= link_to room.user.name, user_path(room.user.id), class: "room-user-name" %>
         </li>
         <li class="room-name">
           <%= room.name %>
