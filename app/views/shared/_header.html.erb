@@ -5,7 +5,7 @@
   <div class="navbar"></div>
     <ul class="lists-right">   
       <% if user_signed_in? %>
-        <li><%= link_to current_user.name, "#", class: "user-name" %></li>
+        <li><%= link_to current_user.name, user_path(current_user.id), class: "user-name" %></li>
         <%= link_to memos_path, class: "header-memo", method: :get do %>
         <li><i class="fa fa-file-text-o fa-2x" aria-hidden="true" id='memo'></i></li>
         <% end %>
