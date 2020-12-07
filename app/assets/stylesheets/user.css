@@ -248,7 +248,77 @@
   background-color: #fff;
 }
 
+.follow-line {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-bottom: 3px solid pink;
+  font-size: 18px;
+}
 
+.followings-link {
+  color: rgb(243, 92, 117);
+}
+
+.center-line {
+  margin: 0 1rem;
+  width: 3px;
+  height: 35px;
+  background-color: pink;
+}
+
+.following-font {
+  text-decoration: none;
+  color: black;
+}
+
+.following-fonts {
+  text-decoration: none;
+  color: rgb(243, 92, 117);
+}
+
+.followers-fonts {
+  text-decoration: none;
+  color: #000;
+}
+
+.followers-font {
+  text-decoration: none;
+  color: pink;
+}
+
+.following-infomation {
+  margin: 20px 15% 60px 15%;
+}
+
+.following-user-info {
+  display: flex;
+  margin-top: 30px;
+}
+
+.following-image {
+  border-radius: 90%;
+  width: 50px;
+  height: 50px;
+}
+
+.following-user-name {
+  margin-left: 100%;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+
+.following-infomation p {
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+.follow-noimage-info {
+  margin-right: 20px;
+}
 
 
 
