@@ -1,0 +1,45 @@
+<%= render "shared/header" %>
+
+<%= render "shared/lists" %>
+
+<div class="user-infomation">
+  <h1><%= "#{@user.name}'s followers" %></h1>
+</div>
+
+<div class="follow-line">
+  <div class="followings-link">
+    <%= link_to "following", following_user_path(@user), class: "following-font" %>
+  </div>
+  <div class="center-line"></div>
+  <div class="followers-link">
+    <%= link_to "followers", followers_user_path(@user), class: "followers -font" %>
+  </div>
+</div>
+
+<div class="following-infomation">
+  <% @user.followers.each do |user| %>
+    <div class="following-user-info">
+    <% if user.image? %>
+      <div class="follow-user-image">
+        <%= image_tag user.image.url, class: "following-image" %>
+      </div>
+      <div class="follow-user-name">
+        <%= link_to user.name, user_path(user.id), class: "following-user-name" %> 
+      </div>
+      <p><%= user.introduction %></p>
+    </div>
+    <% else %>
+    <div class="follow-user-info">
+      <%= image_tag asset_path("noimage.png"), class: "following-image" %>
+    </div>
+    <div class="follow-user-name">
+        <%= link_to user.name, user_path(user.id), class: "following-user-name" %> 
+      </div>
+      <p><%= user.introduction %></p>
+    </div>
+
+    <% end %>
+      
+  <% end %>
+</div>
+

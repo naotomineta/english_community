@@ -146,30 +146,82 @@
 }
 
 .user-infomation h1 {
-    padding: 1rem 2rem;
-    color: black;
-    font-size: 40px;
-    font-weight: bold;
-    background: rgb(250, 174, 187);
-    background-image: radial-gradient(rgb(252, 216, 222) 13%, transparent 13%), radial-gradient(pink 13%, transparent 13%);
-    background-size: 50px 50px;
-    background-position: 0 0, 25px 25px;
-    margin: 0 100px;
+  padding: 1rem 2rem;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  background: rgb(250, 174, 187);
+  background-image: radial-gradient(rgb(252, 216, 222) 13%, transparent 13%), radial-gradient(pink 13%, transparent 13%);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  margin: 0 100px;
 }
 
-.faceicon {
-  margin-top: 30px;
+.user-detail {
+  display: flex;
+  justify-content: space-around;
 }
 
-.as {
+.user-name-image {
+  margin: 30px 0 0 40px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.user-detail-image {
   width: 120px;
   height: 100px;
   border-radius: 100%;
 }
 
-.show-name {
-  margin-top: 10px;
-  font-size: 30px;
+.follow-detail {
+  margin: 50px 30px 0 0;
+  text-decoration: none;
+}
+
+.follow {
+  margin-top: -20px;
+  text-decoration: none;
+}
+
+.follow-btn {
+  margin-bottom: 20px;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: pink;
+  border: 2px solid rgb(236, 70, 98);
+  cursor: pointer;
+}
+
+.follow-count {
+  color: pink;
+}
+
+.follow-detail h6  {
+  margin-left: 30px;
+}
+
+.follow-detail p  {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.following {
+  text-decoration: none;
+  color: rgb(243, 99, 123);
+}
+
+.followers {
+  text-decoration: none;
+  color: rgb(243, 99, 123);
+}
+
+.follow-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
 .kakomi-maru4 {
@@ -183,15 +235,91 @@
   box-shadow: 2px 2px 1px #c7c7c7;
   border-radius: 8px; 
   word-break : break-all;
- }
+  }
 
- .title-maru4 {
+.title-maru4 {
   position: absolute;
   right: 20px; 
   top: -15px;
   padding: 0 .5em;
   font-weight: bold;
   font-size: 1.1em;
-  color: #ff9ece; /* タイトル色 */
+  color: #ff9ece; 
   background-color: #fff;
- }
+}
+
+.follow-line {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-bottom: 3px solid pink;
+  font-size: 18px;
+}
+
+.followings-link {
+  color: rgb(243, 92, 117);
+}
+
+.center-line {
+  margin: 0 1rem;
+  width: 3px;
+  height: 35px;
+  background-color: pink;
+}
+
+.following-font {
+  text-decoration: none;
+  color: black;
+}
+
+.following-fonts {
+  text-decoration: none;
+  color: rgb(243, 92, 117);
+}
+
+.followers-fonts {
+  text-decoration: none;
+  color: #000;
+}
+
+.followers-font {
+  text-decoration: none;
+  color: pink;
+}
+
+.following-infomation {
+  margin: 20px 15% 60px 15%;
+}
+
+.following-user-info {
+  display: flex;
+  margin-top: 30px;
+}
+
+.following-image {
+  border-radius: 90%;
+  width: 50px;
+  height: 50px;
+}
+
+.following-user-name {
+  margin-left: 100%;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+
+.following-infomation p {
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+.follow-noimage-info {
+  margin-right: 20px;
+}
+
+
+
+  
