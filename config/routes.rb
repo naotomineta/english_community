@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   root to: 'rooms#index'
 
   resources :users, only: [:show, :edit, :update] 
-    member do
   resources :rooms, only: [:index, :new, :create, :show, :destroy] do
     resources :messages, only: [:new, :create]
     collection do
@@ -13,4 +12,5 @@ Rails.application.routes.draw do
     end
   end
   resources :memos, only: [:index, :new, :create, :edit, :update, :destroy]
+  resources :relationships, only: [:create, :destroy]
 end
