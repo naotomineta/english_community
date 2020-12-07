@@ -6,18 +6,40 @@
   <div class="user-infomation">
     <h1>User Infomation</h1>
   </div>
-  <div class="faceicon">
+</div>
+  <div class="user-detail">
+    <div class="user-name-image">
       <% if @user.image? %>
-        <%= image_tag @user.image.url, class: "as" %>
+          <%= image_tag @user.image.url, class: "user-detail-image" %><p class="user-detail-name"><%= @user.name %></p>
       <% else %>
         <p><i class="fa fa-user-circle-o fa-3x" aria-hidden="true" id="user"></i></p>
+        <%= @user.name %>
       <% end %>
     </div>
-  <div class="show-name">
-    <%= @user.name %>
-  </div>  
-</div>
+    <div class="follow-detail">
+      <div class="follow">
+        <% unless current_user == @user %>
+          <% if current_user.following?(@user) %>
+            <%= form_for(current_user.relationships.find_by(follow_id: @user.id), html: { method: :delete }) do |f| %>
+              <%= hidden_field_tag :follow_id, @user.id %>
+              <%= f.submit 'Unfollow', class: 'follow-btn' %>
+            <% end %>
+          <% else %>
+            <%= form_for(current_user.relationships.build) do |f| %>
+              <%= hidden_field_tag :follow_id, @user.id %>
+              <%= f.submit 'Follow', class: 'follow-btn' %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="follow-count">
+        <h6><%= link_to "Following: #{@user.followings.count}", following_user_path(@user), class: "following" %></h6>
+        <p><%= link_to "Followers: #{@user.followers.count}", followers_user_path(@user), class: "followers" %></p>
+      </div>
+    </div>  
+  </div>
 
 <div class="kakomi-maru4"><span class="title-maru4">introduction</span>
   <%= simple_format @user.introduction %>
 </div>
+
