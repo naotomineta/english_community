@@ -21,6 +21,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :name%>
+            <span class="indispensable">(indispensable)</span>
           </div>
           <div class='field-input'>
             <%= f.text_field :name, autofocus: true%>
@@ -29,6 +30,7 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :email%>
+            <span class="indispensable">(indispensable)</span>
           </div>
           <div class='field-input'>
             <%= f.email_field :email%>
@@ -46,9 +48,18 @@
         <div class='field'>
           <div class='field-label'>
             <%= f.label :password_confirmation%>
+            <span class="indispensable">(indispensable)</span>
           </div>
           <div class='field-input'>
             <%= f.password_field :password_confirmation, autocomplete: "off"%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :introduction%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_area :introduction, class: "field-input-introduction"%>
           </div>
         </div>
         <div class='actions'>

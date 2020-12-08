@@ -40,6 +40,8 @@
   </div>
 
 <div class="kakomi-maru4"><span class="title-maru4">introduction</span>
-  <%= simple_format @user.introduction %>
+  <% if @user.introduction? %>
+    <%= simple_format @user.introduction %>
+  <% end %>
 </div>
 
