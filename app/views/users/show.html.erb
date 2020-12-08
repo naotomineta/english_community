@@ -12,7 +12,7 @@
       <% if @user.image? %>
           <%= image_tag @user.image.url, class: "user-detail-image" %><p class="user-detail-name"><%= @user.name %></p>
       <% else %>
-        <p><i class="fa fa-user-circle-o fa-3x" aria-hidden="true" id="user"></i></p>
+        <p><%= image_tag asset_path("noimage.png"), class: "user-no-image" %></p>
         <%= @user.name %>
       <% end %>
     </div>

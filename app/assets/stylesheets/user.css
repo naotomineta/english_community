@@ -168,6 +168,12 @@
   text-align: center;
 }
 
+.user-no-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 120%;
+}
+
 .user-detail-image {
   width: 120px;
   height: 100px;
