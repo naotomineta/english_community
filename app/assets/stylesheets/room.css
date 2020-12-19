@@ -96,22 +96,14 @@ h3 {
 }
 
 .rooms {
-  background-color: #fff;
-  display: flex;
-}
-.room {
-  margin: 10px;
+
 }
 
 .room-detail {
-  background-color: rgb(250, 213, 219);
-  display: inline-block;
-  margin: 40px 40px 40px 70px;
-  font-size: 20px;
-  border: 2px solid rgb(250, 213, 219);
-  padding: 20px;
-  border-radius: 8%;
-  text-align: center;
+  margin: 10px 20px 0 50px;
+  border-top: 2px solid pink;
+  border-bottom: 2px solid pink;
+  display: flex;
 }
 
 .room-image {
@@ -133,11 +125,34 @@ h3 {
 }
 
 .room-name {
+  margin-top: 5px;
   margin-bottom: 5px;
+  font-size: 20px;
 }
 
+.room-title {
+  text-decoration: none;
+  color: rgb(243, 130, 149);
+}
+
+.room-content {
+  font-size: 14px;
+  word-break: break-all;
+  margin: 0 10px 10px 10px;
+}
+
+.room-right {
+  font-size: 10px;
+  margin: 5px 0 0 auto;
+}
+
+.room-created {
+
+}
+
+
 .room-toeic {
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .enter-room {
@@ -334,6 +349,10 @@ select {
   cursor: pointer;
 }
 
+#back {
+  margin-top: 20px;
+}
+
 .display-btn h4 {
   border: 2px solid gray;
   background: rgb(190, 189, 189);
@@ -379,8 +398,8 @@ select {
 
 .delete-btn {
   font-size: 14px;
-  margin-top: 15px;
-  margin-left: 45%;
+  margin: 15px 20px 0 auto;
+  
 }
 
 .messages-screen {
@@ -493,6 +512,5 @@ select {
 .mychat {
   background-color: pink;
 }
-
 
 
