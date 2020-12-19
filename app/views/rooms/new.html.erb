@@ -6,12 +6,21 @@
 
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
-        <%= f.label :new_room, class: 'chat-room-form__label'%>
+        <%= f.label :Title, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
-        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'Please input the name of the room'%>
+        <%= f.text_field :title, class: 'chat__room_name chat-room-form__input', placeholder: 'Please input the title of the room'%>
       </div>
     </div>
+    <div class='chat-room-form__field'>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :Content, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_area :content, class: 'chat__room_name chat-room-form__input', placeholder: 'Please input the content of the room'%>
+      </div>
     <div class='chat-room-form__field'>
     </div>
     <div class='chat-room-form__field'>

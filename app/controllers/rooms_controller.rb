@@ -39,7 +39,7 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:name, :toeic_id).merge(user_id: current_user.id)
+    params.require(:room).permit(:title, :content, :toeic_id).merge(user_id: current_user.id)
   end
 
   def search_room
