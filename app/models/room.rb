@@ -5,6 +5,7 @@ class Room < ApplicationRecord
   belongs_to :toeic
   has_many :messages, dependent: :destroy
 
-  validates :name, presence: true
+  validates :title, presence: true
+  validates :content, presence: true
   validates :toeic_id, numericality: { other_than: 0 }
 end
