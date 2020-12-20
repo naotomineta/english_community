@@ -15,8 +15,10 @@ RSpec.describe 'Rooms', type: :system do
       sign_in(@user)
       # ルーム作成ページへ移動する
       visit new_room_path
-      # ルーム名を入力する
-      fill_in 'room_name', with: 'english'
+      # ルームタイトルを入力する
+      fill_in 'room_title', with: 'english'
+      # ルーム内容を入力する
+      fill_in 'room_content', with: 'talk'
       # Toeic level枠をクリックするとセレクトボックスが出てくるのを確認する
       find('#toeic').click
       expect(page).to have_content(400)
@@ -46,7 +48,8 @@ RSpec.describe 'Rooms', type: :system do
       # 新規登録ページへ移動する
       visit new_room_path
       # ルーム情報を入力する
-      fill_in 'room_name', with: ''
+      fill_in 'room_title', with: ''
+      fill_in 'room_content', with: ''
       # サインアップボタンを押してもユーザーモデルのカウントは上がらないことを確認する
       expect  do
         find('#create-room').click
@@ -54,7 +57,8 @@ RSpec.describe 'Rooms', type: :system do
       # 新規登録ページへ戻されることを確認する
       expect(current_path).to eq '/rooms'
       # エラーメッセージが表示されていることを確認する
-      expect(page).to have_content("Name can't be blank")
+      expect(page).to have_content("Title can't be blank")
+      expect(page).to have_content("Content can't be blank")
       expect(page).to have_content('Toeic must be other than 0')
     end
   end
